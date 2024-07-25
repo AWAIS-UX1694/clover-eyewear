@@ -1,0 +1,629 @@
+@font-face {
+    font-family: Poppins-regular;
+    src: url(./Assets/font/Poppins-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: Roboto-Bold;
+    src: url(./Assets/font/Roboto-Bold.ttf);
+  }
+
+
+
+.App{
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+.main{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    flex-direction: column;
+}
+
+
+
+.mainslide1{
+    background-image: url("https://images.unsplash.com/photo-1556618238-293736ec596e?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-repeat: no-repeat;
+    
+    background-size: cover;  /* Cover the entire area */
+    background-position: center; /* Center the background image */
+   
+    height: 100vh; /* Set the height to full viewport height */
+    width: 100vw; 
+
+}
+
+h1{
+    color: rgb(255, 255, 255);
+    /* font-size: 100px; */
+    font-family: "Roboto-Bold";
+    color: black;
+    font-size: 100px;
+
+}
+
+p{
+    font-family: "Poppins-regular";
+    font-size: 24px;
+    color: black;
+}
+
+.logo {
+    position: absolute; /* Position relative to the nearest positioned ancestor */
+    top: 10px; /* 10 pixels from the top */
+    left: 10px; /* 10 pixels from the left */
+    z-index: 1000; /* Ensure it's above other elements */
+  }
+  
+  .logo img {
+    height: 100px; /* Adjust based on your logo's dimensions */
+    width: auto; /* Maintain aspect ratio */
+  }
+
+  .login-button {
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+    z-index: 1000; 
+  }
+  
+  .login-button button {
+    padding: 15px 46px; 
+    background-color: #004aad; 
+    color: white; 
+    border-radius: 5px ;
+  
+    cursor: pointer; 
+    font-size: 20px; 
+  }
+  
+  .login-button button:hover {
+    background-color: #165aad; 
+  }
+
+  .getstarted{
+    padding: 29px 122px;
+    background-color: #004aad;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 32px;
+    margin-top: 28px;
+    border-radius: 7px ;
+  }
+  .getstarted:hover {
+    background-color: #165aad; 
+  }
+
+
+/* */
+
+
+/* Slide 2 start*/ 
+.mainSlide2{
+    display: flex;
+    flex-direction: row;
+    width: 98%; /* Stretch to full width */
+    height: 100%; 
+
+}
+.bg2{
+    background-color: rgb(255, 255, 255);
+}
+
+h2{
+color: black;
+font-family: "Roboto-Bold";
+font-size: 60px;
+text-align: left;
+}
+
+.mainSlide2 p{
+  font-family: "Poppins-regular";
+  font-size: 30px;
+  color: black;
+padding: 0rem 24rem;
+  text-align: center;
+}
+
+.main .bg2 {
+    display: flex;
+    height: 100vh;
+    width: 100%; 
+  }
+  
+  .mainSlide2 .rightContainer {
+    
+  
+    height: 100vh;
+    width: 50%;
+  }
+  .mainSlide2 .rightContainer video{
+    height: 100%;
+    width: 100%;
+  }
+
+ .mainSlide2 .leftContainer {
+    flex: 1;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px; 
+  }
+  
+  .videoDisplay {
+    width: 100%; 
+    height: auto; 
+    max-height: 100%;
+  }
+
+/* third slide*/
+
+.mainslide3 h2{
+  font-size: 70px;
+  text-align: center;
+
+}
+
+.mainslide3 p{
+  font-size: 35px;
+  color: black;
+  width: 80%;
+  text-align: center;
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+
+.slider{
+  height: 300px;
+  
+  position: relative;
+  width: 90%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.slide-track{
+  display: flex;
+  width: calc(250px * 18);
+  animation: scroll 70s linear infinite;
+}
+
+.slide-track:hover{
+  animation-play-state: paused;
+}
+
+@keyframes scroll{
+  0%{
+    transform: translateX(0);
+  }
+
+  100%{
+    transform: translateX(calc(-500px * 9));
+  }
+}
+.slide{
+  width: 500px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px;
+}
+
+.slide img{
+  width: 100%;
+  transition: transform 1s;
+  height: 100%;  /* Added to ensure images are properly scaled */
+  object-fit: cover;
+}
+
+.slide img:hover{
+  transform: translateZ(10px);
+
+}
+
+.slider::before, .slider::after{
+content: '';
+height: 100%;
+position: absolute;
+width: 15%;
+z-index: 2;
+}
+
+.slider::before{
+  left: 0;
+  top: 0;
+}
+
+.slider::after{
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+
+
+/* fourth slide*/
+
+.mainslide4{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+.mainslide4 .leftcontainer{
+  margin-right: 30px;
+
+}
+.mainslide4 .leftcontainer, .mainslide4 .rightcontainer{
+  background-color: black;
+  width: 50%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.leftcontainer h1, .rightcontainer h1{
+  color: white;
+  font-size: 50px;
+  text-align: center;
+}
+
+.leftcontainer p, .rightcontainer p{
+  color: white;
+  text-align: center;
+  width: 50%;
+  margin-top: 12px;
+}
+
+.leftcontainer img, .rightcontainer img{
+  margin-top: 18px;
+}
+
+/* fifth slide*/
+
+.mainslide5{
+  background-image: url("https://images.unsplash.com/photo-1556618238-293736ec596e?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-repeat: no-repeat;
+  
+  background-size: cover;  /* Cover the entire area */
+  background-position: center; /* Center the background image */
+ 
+  height: 100vh; /* Set the height to full viewport height */
+  width: 100vw; 
+
+}
+
+.mainslide5 h1{
+font-size: 54px;
+}
+.mainslide5 p{
+  font-size: 35px;
+}
+
+/* sixth slide*/
+
+.TeamContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 16px;
+}
+
+.container1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  width: 33%; 
+}
+
+.container1 img{
+  /* width: 50%;
+  height: 50%;
+  border-radius: 50%; */
+
+  width: 350px;  /* Adjust the width to your preference */
+    height: 350px; /* Make height equal to width */
+    border-radius: 50%;
+    object-fit: cover; 
+}
+.container1 p{
+  width: 50%;
+  text-align: center; 
+}
+.container1 h2{
+  font-size: 50px;
+  margin-bottom: 8px;
+  font-family: "Roboto-Bold";
+  margin-top: 12px;
+
+}
+
+/******************888888888888888****************/
+
+/*nvabar responsive*/
+
+
+.navbaronMobile .logo {
+  position: absolute; /* Position relative to the nearest positioned ancestor */
+  top: 10px; /* 10 pixels from the top */
+  left: 10px; /* 10 pixels from the left */
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+.navbaronMobile .logo img {
+  height: 60px; /* Adjust based on your logo's dimensions */
+  width: auto; /* Maintain aspect ratio */
+}
+
+.navbaronMobile  .login-button button {
+  padding: 4px 28px;
+  font-size: 15px;
+}
+
+/* mobile css*/
+
+.displayonMobile {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+
+.displayonMobile .mainslide1 {
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+  padding-top: 100px;
+  padding-bottom: 20px;
+  }
+
+.displayonMobile .mainslide1 h1{
+  font-size: 25px;
+  text-align: center;
+}
+.displayonMobile .mainslide1 p{
+  font-size: 12px;
+  text-align: center;
+}
+
+.displayonMobile .getstarted{
+  padding: 7px 25px;
+
+  font-size: 14px;
+}
+
+
+
+/* second slide mobile */
+
+.displayonMobile .mainSlide2{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.displayonMobile .mainSlide2 .leftContainer h2{
+font-size: 22px;
+}
+.displayonMobile .mainSlide2 .leftContainer p{
+  font-size: 15px;
+  padding: 0px;
+  }
+
+  .displayonMobile .mainSlide2 .rightContainer{
+    width: 100%;
+    height: auto;
+  
+  }
+
+  /* third slide mobile */
+  .displayonMobile .mainslide3{
+    margin-top: 32px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .displayonMobile .mainslide3 .slide{
+    height: 16%;
+  }
+  .displayonMobile .mainslide3 h2 {
+    font-size: 29px;
+    line-height: 36px;
+}
+
+.displayonMobile .mainslide3 img{
+  height: 54%;
+}
+.displayonMobile .mainslide3 p {
+  font-size: 14px;
+  color: black;
+   width: auto;
+
+}
+
+
+  /* fourth slide mobile */
+  .displayonMobile .main {
+    height: auto;
+  }
+  .displayonMobile .mainSlide2 .rightContainer video {
+height: auto;
+  }
+  .displayonMobile .main .mainslide4{
+    display: flex;
+    flex-direction: column;
+  }
+  .displayonMobile .main .mainslide4 .leftcontainer{
+    margin-right: 0px;
+  }
+  .displayonMobile .main .mainslide4 .leftcontainer,.displayonMobile .main .mainslide4 .rightcontainer {
+
+width: auto;
+height: auto;
+margin: 12px 12px;
+padding: 16px;
+  }
+
+  .displayonMobile .main .mainslide4 .leftcontainer h1,  .displayonMobile .main .mainslide4 .rightcontainer h1{
+    font-size: 20px;
+  }
+
+  .displayonMobile .main .mainslide4 .leftcontainer p,  .displayonMobile .main .mainslide4 .rightcontainer p{
+    font-size: 15px;
+    width: 100%;
+  }
+  .displayonMobile .main .mainslide4 .leftcontainer img,  .displayonMobile .main .mainslide4 .rightcontainer img {
+    width: 64% !important; 
+    border-radius: 5px;
+
+  }
+
+  /* fifth slide */
+
+  .displayonMobile .mainslide5 {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    margin-top: 12px;
+    }
+  
+  .displayonMobile .mainslide5 h1{
+    font-size: 20px;
+    text-align: center;
+  }
+  .displayonMobile .mainslide5 p{
+    font-size: 12px;
+    text-align: center;
+  }
+
+
+  /* sixth slide*/
+
+  .displayonMobile .mainslide6 {
+    margin-top: 12px;
+  }
+  .displayonMobile .mainslide6 h1{
+    font-size: 32px;
+  }
+  .displayonMobile .mainslide6 .TeamContainer {
+    flex-direction: column;
+  }
+  .displayonMobile .TeamContainer .container1 img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.displayonMobile .TeamContainer .container1{
+  width: auto;
+  margin-top: 12px;
+}
+
+.displayonMobile .TeamContainer .container1 h2{
+  font-size: 20px;
+}
+
+.displayonMobile .TeamContainer .container1 p{
+  font-size: 13px;
+  width: auto;
+  
+}
+
+
+ /* sevent slide*/
+
+ .displayonMobile .mainslide6 {
+  margin-top: 12px;
+}
+.displayonMobile .mainslide6 h1{
+  font-size: 32px;
+}
+.displayonMobile .mainslide6 .TeamContainer {
+  flex-direction: column;
+}
+.displayonMobile .TeamContainer .container1 img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.displayonMobile .TeamContainer .container1{
+width: auto;
+margin-top: 12px;
+}
+
+.displayonMobile .TeamContainer .container1 h2{
+font-size: 20px;
+}
+
+.displayonMobile .TeamContainer .container1 p{
+font-size: 13px;
+width: auto;
+
+}
+/* media query for responsive*/
+
+
+
+@media screen and (max-width: 640px) {
+
+  .navbaronLaptop{
+    display: none;
+  }
+
+  .navbaronMobile{
+    display: flex;
+  }
+.displayonMobile{
+  display: flex;
+}
+  .displayonLaptop{
+    display: none;
+  }
+  
+}
+
+@media screen and (min-width: 641px) {
+ 
+  .navbaronLaptop{
+    display: block;
+  }
+
+  .navbaronMobile{
+    display: none;
+  }
+
+  .displayonMobile{
+    display: none;
+  }
+
+  .App .displayonLaptop{
+    display: block;
+  }
+  
+}
+
+
+
