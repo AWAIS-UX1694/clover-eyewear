@@ -11,9 +11,12 @@
   --default-bg: #ffffff;
 }
 
+* {
+  font-family: "Poppins", "Roboto", sans-serif !important;
+}
+
 body {
   margin: 0;
-  font-family: "Poppins", "Roboto", sans-serif;
 }
 
 h1,
