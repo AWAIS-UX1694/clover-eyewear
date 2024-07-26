@@ -10,7 +10,7 @@ import glasses1 from "../Assets/images/glasses1.avif";
 import glasses2 from "../Assets/images/glasses2.avif";
 
 export default function Landing() {
-  const child = { width: `160em`, height: `100%` };
+  const child = { width: `60em`, height: `100%`, padding: "0rem 4rem" };
 
   return (
     <>
@@ -257,7 +257,14 @@ export default function Landing() {
             </div>
 
             <div className="rightContainer">
-              <video loop width="100%"controls={false} autoPlay={true} muted playsInline>
+              <video
+                loop
+                width="100%"
+                controls={false}
+                autoPlay={true}
+                muted
+                playsInline
+              >
                 <source src={video} type="video/mp4" />
               </video>
             </div>
@@ -399,12 +406,12 @@ export default function Landing() {
               </p>
             </div>
           </div>
-        </div> 
+        </div>
         {/* sixth slide end*/}
 
         {/* seventh slide start*/}
 
-         <div className="main-slide main bg mainslide6">
+        <div className="main-slide main bg mainslide6">
           <h1>Our Testimonials</h1>
 
           <div className="TeamContainer">
