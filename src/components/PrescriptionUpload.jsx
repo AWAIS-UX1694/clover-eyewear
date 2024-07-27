@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Image, Upload } from "antd";
+import { Button, Image, Upload } from "antd";
 import { FaPlus } from "react-icons/fa6";
+
 const getBase64 = (file) =>
   new Promise((resolve, reject) => {
     const reader = new FileReader();
@@ -8,6 +9,7 @@ const getBase64 = (file) =>
     reader.onload = () => resolve(reader.result);
     reader.onerror = (error) => reject(error);
   });
+
 const PrescriptionUpload = ({ fileList = [], setFileList }) => {
   const [previewOpen, setPreviewOpen] = useState(false);
   const [previewImage, setPreviewImage] = useState("");
@@ -34,7 +36,7 @@ const PrescriptionUpload = ({ fileList = [], setFileList }) => {
     </button>
   );
   return (
-    <>
+    <div className="flex flex-col my-5 gap-5">
       <Upload
         action="https://660d2bd96ddfa2943b33731c.mockapi.io/api/upload"
         listType="picture-card"
@@ -57,7 +59,10 @@ const PrescriptionUpload = ({ fileList = [], setFileList }) => {
           src={previewImage}
         />
       )}
-    </>
+      <Button type="primary" block disabled={fileList.length < 1}>
+        Upload
+      </Button>
+    </div>
   );
 };
 export default PrescriptionUpload;
