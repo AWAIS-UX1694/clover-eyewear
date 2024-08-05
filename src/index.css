@@ -7,12 +7,13 @@
 :root {
   --primary-blue: #004aad;
   --hover-blue: #165aad;
+  --active-blue: #3c65a8;
   --default-text: #000000;
   --default-bg: #ffffff;
 }
 
 * {
-  font-family: "Poppins", "Roboto", sans-serif !important;
+  font-family: "Poppins", "Roboto", sans-serif;
 }
 
 body {
@@ -26,4 +27,44 @@ h4,
 h5,
 h6 {
   font-family: "Roboto", sans-serif !important;
+}
+
+.poppins {
+  font-family: "Poppins", sans-serif !important;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif !important;
+}
+
+/* Customize the entire scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  /* Width of the scrollbar */
+  height: 12px;
+  /* Height of the scrollbar (for horizontal scrollbar) */
+}
+
+/* Customize the scrollbar track (background) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* Color of the scrollbar track */
+  border-radius: 10px;
+  /* Rounded corners */
+}
+
+/* Customize the scrollbar thumb (scrolling part) */
+::-webkit-scrollbar-thumb {
+  background-color: #004aad;
+  /* Color of the thumb */
+  border-radius: 10px;
+  /* Rounded corners */
+  border: 3px solid #f1f1f1;
+  /* Space around the thumb */
+}
+
+/* Hover effect for the scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #3c65a8;
+  /* Darker color when hovering */
 }
