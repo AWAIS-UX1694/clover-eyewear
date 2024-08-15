@@ -69,9 +69,9 @@ const PrescriptionUpload = ({ fileList = [], setFileList }) => {
         disabled={fileList.length < 1}
         onClick={async () => {
           try {
-            const form = FormData();
+            const form = new FormData();
             form.append("image", fileList);
-            const res = await imageUpload({ value: fileList[0] });
+            const res = await imageUpload({ value: fileList[0].originFileObj });
             console.log(res);
           } catch (err) {
             console.error(err);
