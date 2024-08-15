@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Button, Image, Upload } from "antd";
 import { FaPlus } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
+import { APIS, useAPI } from "../apis/config";
 
 const getBase64 = (file) =>
   new Promise((resolve, reject) => {
@@ -13,6 +15,8 @@ const getBase64 = (file) =>
 const PrescriptionUpload = ({ fileList = [], setFileList }) => {
   const [previewOpen, setPreviewOpen] = useState(false);
   const [previewImage, setPreviewImage] = useState("");
+  const [imageUpload, uploading] = useAPI(APIS.uploadImage);
+  const navigate = useNavigate();
   // const [fileList, setFileList] = useState([]);
   const handlePreview = async (file) => {
     if (!file.url && !file.preview) {
@@ -59,7 +63,22 @@ const PrescriptionUpload = ({ fileList = [], setFileList }) => {
           src={previewImage}
         />
       )}
-      <Button type="primary" block disabled={fileList.length < 1}>
+      <Button
+        type="primary"
+        block
+        disabled={fileList.length < 1}
+        onClick={async () => {
+          try {
+            const form = FormData();
+            form.append("image", fileList);
+            const res = await imageUpload({ value: fileList[0] });
+            console.log(res);
+          } catch (err) {
+            console.error(err);
+          }
+          // navigate("/confirm-prescription");
+        }}
+      >
         Upload
       </Button>
     </div>

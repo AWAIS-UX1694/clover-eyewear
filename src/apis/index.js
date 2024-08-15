@@ -1,5 +1,7 @@
 import { baseModule } from "./config";
 
 export const APIS = {
-    uploadImage: async (body) => await baseModule.post("upload", body)
+    uploadImage: (body) => baseModule.post("eye/", body)
 }
+
+// export default APIS;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Checkbox, Form, Input, InputNumber, Radio } from "antd";
+import { Button, Checkbox, Form, InputNumber, Radio } from "antd";
 
 const onFinish = (values) => {
   console.log("Success:", values);
@@ -11,6 +11,9 @@ const onFinishFailed = (errorInfo) => {
 
 const PrescriptionForm = () => {
   const [sightType, setSightType] = useState("myopia");
+  const [sphere, setSphere] = useState(["", ""]);
+  const [cylinder, setCylinder] = useState(["", ""]);
+  const [axis, setAxis] = useState(["", ""]);
   return (
     <Form
       name="basic"
@@ -33,8 +36,8 @@ const PrescriptionForm = () => {
     >
       <Form.Item name="sight_type" className="helloworld">
         <Radio.Group
-          value={sightType}
           onChange={(e) => setSightType(e.target.value)}
+          value={sightType}
         >
           <div className="flex flex-row">
             <Radio value="myopia">Myopia</Radio>
