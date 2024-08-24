@@ -1,3 +1,5 @@
+import { Button } from "antd";
+import { FaRegUserCircle } from "react-icons/fa";
 import { TiUserOutline } from "react-icons/ti";
 import { Link } from "react-router-dom";
 
@@ -11,9 +13,9 @@ export default function Navbar() {
       </div>
 
       <div className="login-button">
-        <button className="text-base py-2 px-4">
-          <TiUserOutline />
-        </button>
+        <Button type="text">
+          <FaRegUserCircle size={20} />
+        </Button>
       </div>
     </div>
   );

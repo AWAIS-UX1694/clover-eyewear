@@ -16,9 +16,9 @@
 }
 
 .login-button button {
-    background-color: var(--primary-blue);
+    /* background-color: var(--primary-blue);
     color: white;
-    border-radius: 5px;
+    border-radius: 5px; */
     cursor: pointer;
 }
 
