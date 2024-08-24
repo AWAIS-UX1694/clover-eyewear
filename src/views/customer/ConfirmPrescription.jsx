@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Space, Table, Tag } from "antd";
 import { CircularProgress } from "@mui/material";
+import { useLocation } from "react-router-dom";
 const columns = [
   {
     title: "",
@@ -33,26 +34,29 @@ const columns = [
     render: (text) => <p className="text-lg font-light">{text}</p>,
   },
 ];
-const data = [
-  {
-    key: "2",
-    name: "OD",
-    sphere: "+0.50",
-    cylinder: "0.00",
-    axis: "0",
-    pd: "30.5",
-  },
-  {
-    key: "1",
-    name: "OS",
-    sphere: "+0.50",
-    cylinder: "-0.25",
-    axis: "180",
-    pd: "30.0",
-  },
-];
+// const data = [
+//   {
+//     key: "3",
+//     name: "OD",
+//     sphere: "-0.25",
+//     cylinder: "0.00",
+//     axis: "0",
+//     pd: "0",
+//   },
+//   {
+//     key: "1",
+//     name: "OS",
+//     sphere: "0.00",
+//     cylinder: "0.00",
+//     axis: "0",
+//     pd: "0",
+//   },
+// ];
 
 export default function ConfirmPrescription() {
+  const location = useLocation();
+  const { data } = location.state;
+  console.log(data);
   const [loading, setLoading] = useState(true);
   setTimeout(() => setLoading(false), 3000);
   return (

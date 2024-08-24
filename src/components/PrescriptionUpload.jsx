@@ -71,8 +71,9 @@ const PrescriptionUpload = ({ fileList = [], setFileList }) => {
           try {
             const form = new FormData();
             form.append("image", fileList);
-            const res = await imageUpload({ value: fileList[0].originFileObj });
+            const res = await imageUpload({ image: fileList[0].originFileObj });
             console.log(res);
+            navigate("/confirm-prescription", { state: { data: res.data } });
           } catch (err) {
             console.error(err);
           }

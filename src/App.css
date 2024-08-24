@@ -44,7 +44,7 @@
 
 .App .home-section {
     height: initial;
-    min-width: 100vw;
+    min-width: 98vw;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -271,12 +271,13 @@
 @media (max-width: 768px) {
     .App {
         flex-direction: column !important;
-        margin: 1rem;
+        margin: 0rem;
     }
 
     .App .home-section {
-        min-width: 100% !important;
+        min-width: auto !important;
         padding: 1.25rem 0;
+        margin: 0 1rem;
     }
 
     .home-section.section-1 {
@@ -304,7 +305,7 @@
     }
 
     .home-section.section-5 {
-        margin: 0 !important;
+        /* margin: 0 !important; */
     }
 
 

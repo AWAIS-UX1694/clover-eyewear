@@ -68,3 +68,9 @@ h6 {
   background-color: #3c65a8;
   /* Darker color when hovering */
 }
+
+/* Click effect for the scrollbar thumb */
+::-webkit-scrollbar-thumb:active {
+  background-color: #6598db;
+  /* Darker color when hovering */
+}
