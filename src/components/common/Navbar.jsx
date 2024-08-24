@@ -1,3 +1,4 @@
+import { TiUserOutline } from "react-icons/ti";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
@@ -10,7 +11,9 @@ export default function Navbar() {
       </div>
 
       <div className="login-button">
-        <button className="text-base py-2 px-4">Login</button>
+        <button className="text-base py-2 px-4">
+          <TiUserOutline />
+        </button>
       </div>
     </div>
   );
