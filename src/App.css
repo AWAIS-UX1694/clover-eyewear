@@ -146,41 +146,6 @@
   /* margin: 0 2rem; */
 }
 
-.home-section.team-testimonial {
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  margin: 0 2.5rem;
-}
-
-.home-section.team-testimonial .content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
-}
-
-.home-section.team-testimonial .item {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 2rem;
-}
-
-.home-section.team-testimonial .item img {
-  width: 150px;
-  height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.home-section.team-testimonial .item p {
-  width: 80%;
-}
 
 .home-section .main-heading {
   font-size: 24px;
@@ -188,20 +153,9 @@
 }
 
 .home-section .main-para {
-  /* font-family: "Poppins", sans-serif !important; */
   font-size: 20px;
   font-weight: 300;
 }
-
-/* .home-button {
-    padding: 11px 28px;
-    background-color: var(--primary-blue);
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 7px;
-} */
 
 /* CSS */
 .home-button {
@@ -373,17 +327,6 @@
 
   .home-section.section-5 {
     /* margin: 0 !important; */
-  }
-
-  .home-section.team-testimonial {
-    margin-top: 2rem;
-    gap: 2rem;
-    margin: 0;
-  }
-
-  .home-section.team-testimonial .content {
-    flex-direction: column;
-    gap: 3rem;
   }
 
   .home-button {
