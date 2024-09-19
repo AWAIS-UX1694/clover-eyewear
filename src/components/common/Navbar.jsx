@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <div className="navbar">
+    <div className="navbar shadow-md">
       <div className="logo">
         <Link to="/">
           <img src="/logo.jpg" alt="Clover Eyewear" />
         </Link>
-      </div>
+      </div> 
 
       <div className="login-button">
         <Button type="text">

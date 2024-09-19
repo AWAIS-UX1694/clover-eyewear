@@ -13,7 +13,8 @@
 }
 
 * {
-  font-family: "Poppins", "Roboto", sans-serif;
+  font-family: "Exo", sans-serif;
+
 }
 
 body {
@@ -26,15 +27,15 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Roboto", sans-serif !important;
+  font-family: "Exo", sans-serif;
 }
 
 .poppins {
-  font-family: "Poppins", sans-serif !important;
+  font-family: "Exo", sans-serif;
 }
 
 .roboto {
-  font-family: "Roboto", sans-serif !important;
+  font-family: "Exo", sans-serif;
 }
 
 /* Customize the entire scrollbar */

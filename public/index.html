@@ -15,6 +15,12 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+
+    <!-- EXO FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -39,5 +45,20 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+      <!-- <script>
+        const timeline_wrapper = document.querySelector(".timeline-wrapper");
+            timelines = document.querySelectorAll(".timeline li .data");
+
+      for (const time of timelines) {
+         time.onclick = () => time.classList.toggle("show");
+      }
+
+      timeline_wrapper.addEventListener("mousemove", (event) => {
+        const timeline = document.querySelector(".timeline");
+        let scroll_width = event.pageX / timeline_wrapper.clientWidth
+        *  (timeline_wrapper.clientWidth - timeline.clientWidth);
+        timeline.style.left = scroll_width.toFixed(1) + "px";
+      });
+      </script> -->
   </body>
 </html>
