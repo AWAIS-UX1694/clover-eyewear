@@ -51,7 +51,7 @@ export default function Landing() {
 
   return (
     <div className="App">
-      <div className="home-section section-1 gap-3 md:gap-6">
+      <div className="home-section md:mt-0 lg:mt-0  section-1 gap-3 md:gap-6">
         <div className="header  text-2xl md:text-5xl font-semibold">
           Perfect Vision, Perfect Style!
         </div>

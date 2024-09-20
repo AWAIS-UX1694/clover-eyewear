@@ -281,8 +281,6 @@
 
 @media (max-width: 890px) {
   .home-section.section-5 {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-      url("https://images.unsplash.com/photo-1564040052642-3511d70aa681?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -302,11 +300,11 @@
   }
 
   .home-section.section-1 {
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-      url("https://images.unsplash.com/photo-1564867523447-3cea756f76df?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  margin-top: 6rem;
+
   }
 
   .home-section.section-2 {
