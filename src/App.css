@@ -147,7 +147,6 @@
   /* margin: 0 2rem; */
 }
 
-
 .home-section .main-heading {
   font-size: 24px;
   font-weight: 500;
@@ -454,4 +453,21 @@
 }
 .caption .social-links i:hover {
   color: #0c52a1;
+}
+
+.section {
+  /* background: #f45b69; */
+  padding: 50px 0;
+  margin-top: 5rem;
+}
+
+.section .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section h1 {
+  font-size: 2.5rem;
 }

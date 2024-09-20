@@ -20,27 +20,23 @@ import ReactPlayer from "react-player";
 export default function Landing() {
   const timelineData = [
     {
-      version: 'Flowbite Library v1.0.0',
-      date: 'Released on December 2, 2021',
-      description: 'Get started with dozens of web components and interactive.',
+      date: 'About Us',
+      description: 'Founded in 2005, we offer a wide range of eyewear, from prescription glasses to sunglasses, ensuring durability, style, and clarity.',
     },
     {
-      version: 'Flowbite Library v1.1.0',
-      date: 'Released on December 10, 2021',
-      description: 'New features added to enhance accessibility and performance.',
+      date: 'Our Mission',
+      description: 'To deliver innovative vision solutions that combine function with fashion, enhancing the everyday lives of our customers.',
     },
     {
-      version: 'Flowbite Library v1.2.0',
-      date: 'Released on December 23, 2021',
-      description: 'Added advanced grid systems and responsive components.',
+      date: 'Why Choose Us? ',
+      description: '- High-Quality Materials -Advanced Lens Technology - Eco-Friendly Practices - Exceptional Customer Service',
     },
     {
-      version: 'Flowbite Library v1.3.0',
-      date: 'Released on January 5, 2022',
-      description: 'Improved performance for larger datasets.',
+      
+      date: 'Our Promise',
+      description: 'With a focus on quality and customer satisfaction, we strive to offer the best in eyewear while maintaining sustainable business practices.',
     },
     {
-      version: 'Flowbite Library v1.4.0',
       date: 'Released on January 20, 2022',
       description: 'Get started with dozens of web components and interactive.',
     },
@@ -346,8 +342,15 @@ export default function Landing() {
         <HomeButton />
       </div>
       
-      <div className="container h-98svhc w-full flex justify-center items-center">
-      <ol className="flex w-[100%] md:m-52 p-44 h-full justify-between items-center relative flex-col sm:flex-row">
+      <div className="flex flex-col">
+      <section class="section intro">
+        <div class="container">
+          <h1>Cover Eyewear - Redefining Vision with Style and Precision</h1>
+        </div>
+      </section>
+
+      <div className="home-section h-98svh w-[100vh] flex justify-center items-center">
+      <ol className="flex w-[100%] py-8 md:px-44 md:justify-between md:items-center relative flex-col sm:flex-row">
         {timelineData.map((item, index) => (
           <li 
             key={index} 
@@ -377,14 +380,15 @@ export default function Landing() {
 
             {/* Hover Text */}
             {hoveredIndex === index && (
-              <div className="absolute top-16 sm:top-20 p-4 bg-gray-100 shadow-lg rounded-md text-sm text-gray-700 w-64">
-                <h3 className="font-semibold text-gray-900">{item.version}</h3>
+              <div className="absolute z-50 top-16 sm:top-10 p-4 bg-gray-100 shadow-lg rounded-md text-sm text-gray-700 w-64">
+                <h3 className="font-semibold text-gray-900">{item.date}</h3>
                 <p>{item.description}</p>
               </div>
             )}
           </li>
         ))}
       </ol>
+    </div>
     </div>
     </div>
   );
