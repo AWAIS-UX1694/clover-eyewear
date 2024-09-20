@@ -12,77 +12,43 @@ import vision7 from "../assets/img/vision7.png";
 import vision8 from "../assets/img/vision8.png";
 import vision9 from "../assets/img/vision9.png";
 import React, { useState } from "react";
+
 import video1 from "../assets/video/2.mp4";
 import ReactPlayer from "react-player";
 
-const TeamAndTestimonials = ({ image, heading, text }) => {
-  return (
-    <div className="item rounded-lg shadow-md">
-      <img src={image} width={100} height={100} />
-      <h2 className="text-base font-medium">{heading}</h2>
-      <p className="text-sm font-extralight px-5">{text} </p>
-    </div>
-  );
-};
 
 export default function Landing() {
-  const events = [
+  const timelineData = [
     {
-      date: "Specifications of Sunglasses For Men Square Black Frame Black Lens With Box & Clean Cloth",
-      title: "Men's Sport Sunglasses",
-      description: "Day you have been waiting for",
-      details:
-        "When testing an eyewear website, the primary focus should be on ensuring that all essential functionalities work smoothly.",
+      version: 'Flowbite Library v1.0.0',
+      date: 'Released on December 2, 2021',
+      description: 'Get started with dozens of web components and interactive.',
     },
     {
-      date: "Berkley offers a range of fishing sunglasses designed to enhance your experience.",
-      title: "Berkley Fishing Sunglasses",
-      description: "Day you have been waiting for",
-      details:
-        "where users should be able to view various eyewear options and apply filters based on brand, style, and price. ",
+      version: 'Flowbite Library v1.1.0',
+      date: 'Released on December 10, 2021',
+      description: 'New features added to enhance accessibility and performance.',
     },
     {
-      date: "Our journey begins with a wide selection of frames to match every face shape and style.",
-      title: "Discover Your Perfect Frames",
-      description: "Day you have been waiting for",
-      details:
-        "It's important to verify that the product details page displays accurate information, including the availability of different frame sizes and colors.",
+      version: 'Flowbite Library v1.2.0',
+      date: 'Released on December 23, 2021',
+      description: 'Added advanced grid systems and responsive components.',
     },
     {
-      date: "we introduced our innovative virtual try-on tool, allowing you to see how any frame looks on your face.",
-      title: "Virtual Try-On Feature Launch",
-      description: "Day you have been waiting for",
-      details:
-        "Special features like a virtual try-on should also be tested to ensure the experience is seamless across devices.",
+      version: 'Flowbite Library v1.3.0',
+      date: 'Released on January 5, 2022',
+      description: 'Improved performance for larger datasets.',
     },
     {
-      date: "Whether you need single vision, bifocals, or progressive lenses, our platform offers easy prescription customization.",
-      title: "Prescription Lens Customization",
-      description: "Day you have been waiting for",
-      details:
-        "Eyeglasses are something we all take for granted, but they haven’t always existed.",
+      version: 'Flowbite Library v1.4.0',
+      date: 'Released on January 20, 2022',
+      description: 'Get started with dozens of web components and interactive.',
     },
   ];
 
-  const [showDetails, setShowDetails] = useState(
-    Array(events.length).fill(false)
-  );
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
-  const handleMouseEnter = (index) => {
-    setShowDetails((prev) => {
-      const newShowDetails = [...prev];
-      newShowDetails[index] = true;
-      return newShowDetails;
-    });
-  };
 
-  const handleMouseLeave = (index) => {
-    setShowDetails((prev) => {
-      const newShowDetails = [...prev];
-      newShowDetails[index] = false;
-      return newShowDetails;
-    });
-  };
   return (
     <div className="App">
       <div className="home-section section-1 gap-3 md:gap-6">
@@ -379,27 +345,47 @@ export default function Landing() {
         </div>
         <HomeButton />
       </div>
-<div className="main ">
-<h3 class="hints text-3xl">Our Success</h3>
-<div className="timeline-wrapper">
-  
-        <ul className="timeline">
-          {events.map((event, index) => (
-            
-            <li key={index} data-date={event.date}>
-              <span className="title">{event.title}</span>
-              <div
-                className={`data ${showDetails[index] ? "show" : ""}`}
-                onMouseEnter={() => handleMouseEnter(index)}
-                onMouseLeave={() => handleMouseLeave(index)}
-              >
-                <p>{event.details}</p>
+      
+      <div className="container h-98svhc w-full flex justify-center items-center">
+      <ol className="flex w-[100%] md:m-52 p-44 h-full justify-between items-center relative flex-col sm:flex-row">
+        {timelineData.map((item, index) => (
+          <li 
+            key={index} 
+            className="relative flex flex-col md:w-[30rem] group"
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            {/* Circle and Line */}
+            <div className="flex items-center">
+              <div className="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full bg-black shrink-0">
+                
               </div>
-            </li>
-          ))}
-        </ul>
-      </div>
-</div>
+              {/* Line between circles */}
+              {index < timelineData.length - 1 && (
+                <div className="hidden w-52 sm:block h-0.5 bg-gray-300"></div>
+              )}
+            </div>
+
+            {/* Date and Description Beneath Each Point */}
+            <div className="mt-4 text-center">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{item.version}</h3>
+              <time className="block mb-2 text-sm text-start font-normal leading-none text-gray-400 dark:text-gray-500">
+                {item.date}
+              </time>
+              <p className="text-sm text-start text-gray-700 dark:text-gray-400 h-28 w-52">{item.description}</p>
+            </div>
+
+            {/* Hover Text */}
+            {hoveredIndex === index && (
+              <div className="absolute top-16 sm:top-20 p-4 bg-gray-100 shadow-lg rounded-md text-sm text-gray-700 w-64">
+                <h3 className="font-semibold text-gray-900">{item.version}</h3>
+                <p>{item.description}</p>
+              </div>
+            )}
+          </li>
+        ))}
+      </ol>
+    </div>
     </div>
   );
 }
