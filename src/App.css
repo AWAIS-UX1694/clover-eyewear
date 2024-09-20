@@ -298,7 +298,9 @@
     min-width: auto !important;
     padding: 1.25rem 0;
   }
-
+  .App .home-section header{
+    margin-top: 20px;
+  }
   .home-section.section-1 {
   padding: 5px;
 
@@ -362,6 +364,7 @@
   touch-action: manipulation;
   white-space: nowrap;
   font-size: 13px;
+  margin: 10px 0px 20px 0px;
   /* transition: all ease-in-out .20s; */
 }
 

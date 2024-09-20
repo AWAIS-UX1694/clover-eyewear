@@ -51,14 +51,14 @@ export default function Landing() {
 
   return (
     <div className="App">
-      <div className="home-section md:mt-0 lg:mt-0  section-1 gap-3 md:gap-6">
-        <div className="header  text-2xl md:text-5xl font-semibold">
+      <div className="home-section   md:mt-0 lg:mt-0  section-1 gap-3 md:gap-6">
+        <div className="header md:mt-0 lg:mt-0 mt-10 text-2xl md:text-5xl font-semibold">
           Perfect Vision, Perfect Style!
         </div>
         <div className="tagline  text-sm md:text-2xl lg:w-[40rem] font-extralight">
           Explore our premium lenses designed for clarity and comfort.
         </div>
-        <HomeButton />
+        <HomeButton  />
       </div>
       <div className="home-section section-2 gap-7">
         <div className="text-content  gap-4">
