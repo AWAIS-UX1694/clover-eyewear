@@ -55,7 +55,7 @@ export default function Landing() {
         <div className="header  text-2xl md:text-5xl font-semibold">
           Perfect Vision, Perfect Style!
         </div>
-        <div className="tagline poppins text-sm md:text-2xl lg:w-[40rem] font-extralight">
+        <div className="tagline  text-sm md:text-2xl lg:w-[40rem] font-extralight">
           Explore our premium lenses designed for clarity and comfort.
         </div>
         <HomeButton />
@@ -276,10 +276,10 @@ export default function Landing() {
         </div>
       </div>
       <div className="home-section section-3 gap-3">
-        <div className="main-headingc text-3xl font-bold">
+        <div className="main-heading text-3xl font-bold">
           Redefine Your Look with Our Hottest Collection
         </div>
-        <div className="main-para md:px-44 lg:px-52 px-10">
+        <div className="main-para md:px-44 lg:px-52 px-2">
           Step up your style game with eyewear that stands out. From classic
           elegance to modern edge, our top picks are designed to keep you
           looking sharp and feeling confident.
@@ -336,7 +336,7 @@ export default function Landing() {
         </div>
       </div>
       <div className="home-section section-5 gap-3 md:gap-6">
-        <div className="header px-24 text-2xl md:text-5xl font-semibold">
+        <div className="header md:px-24 lg:px-24 px-6 text-2xl md:text-5xl font-semibold">
           See the world with clarity and style. Redefine your vision with our
           precision-crafted eyewear.
         </div>
