@@ -279,7 +279,7 @@ export default function Landing() {
         <div className="main-headingc text-3xl font-bold">
           Redefine Your Look with Our Hottest Collection
         </div>
-        <div className="main-para md:px-48">
+        <div className="main-para md:px-44 lg:px-52 px-10">
           Step up your style game with eyewear that stands out. From classic
           elegance to modern edge, our top picks are designed to keep you
           looking sharp and feeling confident.
