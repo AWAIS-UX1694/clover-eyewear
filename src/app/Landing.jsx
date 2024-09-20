@@ -16,34 +16,34 @@ import React, { useState } from "react";
 import video1 from "../assets/video/2.mp4";
 import ReactPlayer from "react-player";
 
-
 export default function Landing() {
   const timelineData = [
     {
-      date: 'About Us',
-      description: 'Founded in 2005, we offer a wide range of eyewear, from prescription glasses to sunglasses, ensuring durability, style, and clarity.',
+      date: "About Us",
+      description:
+        "Founded in 2005, we offer a wide range of eyewear, from prescription glasses to sunglasses, ensuring durability, style, and clarity.",
     },
     {
-      date: 'Our Mission',
-      description: 'To deliver innovative vision solutions that combine function with fashion, enhancing the everyday lives of our customers.',
+      date: "Our Mission",
+      description:
+        "To deliver innovative vision solutions that combine function with fashion, enhancing the everyday lives of our customers.",
     },
     {
-      date: 'Why Choose Us? ',
-      description: '- High-Quality Materials -Advanced Lens Technology - Eco-Friendly Practices - Exceptional Customer Service',
+      date: "Why Choose Us? ",
+      description:`High-Quality Materials, Advanced Lens Technology, Eco-Friendly Practices, Exceptional Customer Service`,
     },
     {
-      
-      date: 'Our Promise',
-      description: 'With a focus on quality and customer satisfaction, we strive to offer the best in eyewear while maintaining sustainable business practices.',
+      date: "Our Promise",
+      description:
+        "With a focus on quality and customer satisfaction, we strive to offer the best in eyewear while maintaining sustainable business practices.",
     },
     {
-      date: 'Released on January 20, 2022',
-      description: 'Get started with dozens of web components and interactive.',
+      date: "Good Luck",
+      description: "Thank you! Let me know if there's anything I can help you with. 😊",
     },
   ];
 
   const [hoveredIndex, setHoveredIndex] = useState(null);
-
 
   return (
     <div className="App">
@@ -54,7 +54,7 @@ export default function Landing() {
         <div className="tagline  text-sm md:text-2xl lg:w-[40rem] font-extralight">
           Explore our premium lenses designed for clarity and comfort.
         </div>
-        <HomeButton  />
+        <HomeButton />
       </div>
       <div className="home-section section-2 gap-7">
         <div className="text-content  gap-4">
@@ -341,55 +341,59 @@ export default function Landing() {
         </div>
         <HomeButton />
       </div>
-      
+
       <div className="flex flex-col">
-      <section class="section intro">
-        <div class="container">
-          <h1>Cover Eyewear - Redefining Vision with Style and Precision</h1>
+        <section class="section intro md:py-[3.1rem] lg:py-[3.1rem] py-[2.1rem">
+          <div class="container">
+            <h1 className="md:text-[2.5rem] lg:text-[2.5rem] text-[1.5rem]">Cover Eyewear - Redefining Vision with Style and Precision</h1>
+          </div>
+        </section>
+
+        <div className="home-section h-98svh md:w-[100vh] lg:w-[100vh] flex justify-center items-center">
+          <ol className="flex w-[100%] py-8 md:px-44 justify-between items-center relative flex-col sm:flex-row">
+            {timelineData.map((item, index) => (
+              <li
+                key={index}
+                className="relative flex flex-col md:w-[30rem] group"
+              >
+                {/* Circle and Line */}
+                <div className="flex items-center">
+                  <div
+                    className="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full bg-black shrink-0"
+                    onMouseEnter={() => setHoveredIndex(index)}
+                    onMouseLeave={() => setHoveredIndex(null)}
+                  ></div>
+                  {/* Line between circles */}
+                  {index < timelineData.length - 1 && (
+                    <div className="hidden w-52 sm:block h-0.5 bg-gray-300"></div>
+                  )}
+                </div>
+
+                {/* Date and Description Beneath Each Point */}
+                <div className="mt-4 text-center">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                    {item.version}
+                  </h3>
+                  <time className="block mb-2 text-sm text-start font-normal leading-none text-gray-400 dark:text-gray-500">
+                    {item.date}
+                  </time>
+                  <p className="text-sm text-start text-gray-700 dark:text-gray-400 h-28 w-52">
+                    {item.description}
+                  </p>
+                </div>
+ 
+                {/* Hover Text */}
+                {hoveredIndex === index && (
+                  <div className="absolute z-50 top-16 sm:top-10 p-4 bg-gray-100 shadow-lg rounded-md text-sm text-gray-700 w-64">
+                    <h3 className="font-semibold text-gray-900">{item.date}</h3>
+                    <p className="w-52">{item.description}</p>
+                  </div>
+                )}
+              </li>
+            ))}
+          </ol>
         </div>
-      </section>
-
-      <div className="home-section h-98svh w-[100vh] flex justify-center items-center">
-      <ol className="flex w-[100%] py-8 md:px-44 md:justify-between md:items-center relative flex-col sm:flex-row">
-        {timelineData.map((item, index) => (
-          <li 
-            key={index} 
-            className="relative flex flex-col md:w-[30rem] group"
-            onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => setHoveredIndex(null)}
-          >
-            {/* Circle and Line */}
-            <div className="flex items-center">
-              <div className="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full bg-black shrink-0">
-                
-              </div>
-              {/* Line between circles */}
-              {index < timelineData.length - 1 && (
-                <div className="hidden w-52 sm:block h-0.5 bg-gray-300"></div>
-              )}
-            </div>
-
-            {/* Date and Description Beneath Each Point */}
-            <div className="mt-4 text-center">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{item.version}</h3>
-              <time className="block mb-2 text-sm text-start font-normal leading-none text-gray-400 dark:text-gray-500">
-                {item.date}
-              </time>
-              <p className="text-sm text-start text-gray-700 dark:text-gray-400 h-28 w-52">{item.description}</p>
-            </div>
-
-            {/* Hover Text */}
-            {hoveredIndex === index && (
-              <div className="absolute z-50 top-16 sm:top-10 p-4 bg-gray-100 shadow-lg rounded-md text-sm text-gray-700 w-64">
-                <h3 className="font-semibold text-gray-900">{item.date}</h3>
-                <p>{item.description}</p>
-              </div>
-            )}
-          </li>
-        ))}
-      </ol>
-    </div>
-    </div>
+      </div>
     </div>
   );
 }
