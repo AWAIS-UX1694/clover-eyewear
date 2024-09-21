@@ -19,29 +19,34 @@ import ReactPlayer from "react-player";
 export default function Landing() {
   const timelineData = [
     {
+      circleyear: "2020",
       date: "About Us",
       description:
         "Founded in 2005, we offer a wide range of eyewear, from prescription glasses to sunglasses, ensuring durability, style, and clarity.",
     },
     {
+      circleyear: "2021",
       date: "Our Mission",
       description:
         "To deliver innovative vision solutions that combine function with fashion, enhancing the everyday lives of our customers.",
     },
     {
+      circleyear: "2022",
       date: "Why Choose Us? ",
-      description:`High-Quality Materials, Advanced Lens Technology, Eco-Friendly Practices, Exceptional Customer Service`,
+      description:"High-Quality Materials, Advanced Lens Technology, Eco-Friendly Practices, Exceptional Customer Service",
     },
     {
+      circleyear: "2023",
       date: "Our Promise",
       description:
         "With a focus on quality and customer satisfaction, we strive to offer the best in eyewear while maintaining sustainable business practices.",
     },
     {
+      circleyear: "2024",
       date: "Good Luck",
       description: "Thank you! Let me know if there's anything I can help you with. 😊",
-    },
-  ];
+    },
+  ];
 
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
@@ -358,11 +363,11 @@ export default function Landing() {
               >
                 {/* Circle and Line */}
                 <div className="flex items-center">
-                  <div
-                    className="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full bg-black shrink-0"
+                <div
+                    className="z-10 md:text-xs lg:text-xs text-xs flex items-center justify-center w-10 h-10 bg-blue-100 rounded-full shrink-0 font-semibold cursor-pointer"
                     onMouseEnter={() => setHoveredIndex(index)}
                     onMouseLeave={() => setHoveredIndex(null)}
-                  ></div>
+                  >{item.circleyear}</div>
                   {/* Line between circles */}
                   {index < timelineData.length - 1 && (
                     <div className="hidden w-52 sm:block h-0.5 bg-gray-300"></div>
