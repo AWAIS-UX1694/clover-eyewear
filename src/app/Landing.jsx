@@ -74,9 +74,9 @@ export default function Landing() {
           <HomeButton />
         </div>
         <div className="video-content">
-          <marquee behavior="" loop="10" width="80%" direction="left">
+          <marquee behavior="" loop="10" className='md:w-[80%] w-full' direction="left">
             <div className="rinning flex gap-3">
-              <section className=" h-28 w-44  flex flex-col items-center rounded-xl  bg-gray-100 cursor-pointer gap-3 relative overflow-hidden  categoryContainer">
+              <section className=" h-28 w-[10rem]  flex flex-col items-center rounded-xl  bg-gray-100 cursor-pointer gap-3 relative overflow-hidden  categoryContainer">
                 <img
                   src={vision1}
                   className="rounded-xl h-full w-full object-cover transition-all delay-75 ease-out"
@@ -122,7 +122,7 @@ export default function Landing() {
               </section>
             </div>
           </marquee>
-          <marquee scrolldelay="200" loop="10" width="80%" direction="left">
+          <marquee scrolldelay="200" loop="10" className='md:w-[80%] w-full' direction="left">
             <div className="rinning flex gap-3">
               <section className=" h-28 w-44  flex flex-col items-center rounded-xl  bg-gray-100 cursor-pointer gap-3 relative overflow-hidden  categoryContainer">
                 <img
@@ -175,7 +175,7 @@ export default function Landing() {
             behavior=""
             scrolldelay="100"
             loop="10"
-            width="80%"
+            className='md:w-[80%] w-full'
             direction="left"
           >
             <div className="rinning flex gap-3">
@@ -226,7 +226,7 @@ export default function Landing() {
               </section>
             </div>
           </marquee>
-          <marquee behavior="" loop="40" width="80%" direction="left">
+          <marquee behavior="" loop="40" className='md:w-[80%] w-full' direction="left">
             <div className="rinning flex gap-3">
               <section className=" h-28 w-44  flex flex-col items-center rounded-xl  bg-gray-100 cursor-pointer gap-3 relative overflow-hidden  categoryContainer">
                 <img
