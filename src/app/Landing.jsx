@@ -11,7 +11,7 @@ import vision6 from "../assets/img/vision6.png";
 import vision7 from "../assets/img/vision7.png";
 import vision8 from "../assets/img/vision8.png";
 import vision9 from "../assets/img/vision9.png";
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 
 import video1 from "../assets/video/2.mp4";
 import ReactPlayer from "react-player";
@@ -48,10 +48,35 @@ export default function Landing() {
     },
   ];
 
-  const [hoveredIndex, setHoveredIndex] = useState(null);
+useEffect(() => {
+  const handleWheel = (event) => {
+      event.preventDefault();
+      window.scrollBy({
+          left: event.deltaY,
+          behavior: 'smooth', // Optional for smooth scrolling
+      });
+  };
 
+  window.addEventListener('wheel', handleWheel, { passive: false });
+
+  // Cleanup the event listener on component unmount
+  return () => {
+      window.removeEventListener('wheel', handleWheel);
+  };
+}, []);
+
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  function horizontalScroll(event) {
+    if (window.innerWidth >= 768) { // Adjust this breakpoint as needed
+        const delta = Math.max(-1, Math.min(1, (event.nativeEvent.wheelDelta || -event.nativeEvent.detail)));
+        event.currentTarget.scrollLeft -= (delta * 300);
+        event.preventDefault();
+    }
+}
   return (
-    <div className="App">
+    <div
+    onWheel={horizontalScroll}
+    className="App">
       <div className="home-section   md:mt-0 lg:mt-0  section-1 gap-3 md:gap-6">
         <div className="header md:mt-0 lg:mt-0 mt-10 text-2xl md:text-5xl font-semibold">
           Perfect Vision, Perfect Style!
