@@ -1,7 +1,5 @@
 import HomeButton from "../components/common/HomeButton";
 import { Slide, Slider } from "../components/common/Slider";
-import Team from "../assets/img/team.avif";
-import Testimonial from "../assets/img/testimonial.avif";
 import vision1 from "../assets/img/vision1.png";
 import vision2 from "../assets/img/vision2.png";
 import vision3 from "../assets/img/vision3.png";
@@ -11,12 +9,12 @@ import vision6 from "../assets/img/vision6.png";
 import vision7 from "../assets/img/vision7.png";
 import vision8 from "../assets/img/vision8.png";
 import vision9 from "../assets/img/vision9.png";
-import React, { useState,useEffect } from "react";
-
+import React, { useState, useEffect } from "react";
 import video1 from "../assets/video/2.mp4";
 import ReactPlayer from "react-player";
 
 export default function Landing() {
+  // STATIC DATA FOR TIME LINE
   const timelineData = [
     {
       circleyear: "2020",
@@ -33,7 +31,8 @@ export default function Landing() {
     {
       circleyear: "2022",
       date: "Why Choose Us? ",
-      description:"High-Quality Materials, Advanced Lens Technology, Eco-Friendly Practices, Exceptional Customer Service",
+      description:
+        "High-Quality Materials, Advanced Lens Technology, Eco-Friendly Practices, Exceptional Customer Service",
     },
     {
       circleyear: "2023",
@@ -44,39 +43,47 @@ export default function Landing() {
     {
       circleyear: "2024",
       date: "Good Luck",
-      description: "Thank you! Let me know if there's anything I can help you with. 😊",
-    },
-  ];
+      description:
+        "Thank you! Let me know if there's anything I can help you with. 😊",
+    },
+  ];
 
-useEffect(() => {
-  const handleWheel = (event) => {
+  // HORIZONTAL SCROLLING FUNCTIONALITY
+  useEffect(() => {
+    const handleWheel = (event) => {
       event.preventDefault();
       window.scrollBy({
-          left: event.deltaY,
-          behavior: 'smooth', // Optional for smooth scrolling
+        left: event.deltaY,
+        behavior: "smooth",
       });
-  };
+    };
 
-  window.addEventListener('wheel', handleWheel, { passive: false });
+    window.addEventListener("wheel", handleWheel, { passive: false });
 
-  // Cleanup the event listener on component unmount
-  return () => {
-      window.removeEventListener('wheel', handleWheel);
-  };
-}, []);
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("wheel", handleWheel);
+    };
+  }, []);
 
   const [hoveredIndex, setHoveredIndex] = useState(null);
   function horizontalScroll(event) {
-    if (window.innerWidth >= 768) { // Adjust this breakpoint as needed
-        const delta = Math.max(-1, Math.min(1, (event.nativeEvent.wheelDelta || -event.nativeEvent.detail)));
-        event.currentTarget.scrollLeft -= (delta * 300);
-        event.preventDefault();
+    if (window.innerWidth >= 768) {
+      const delta = Math.max(
+        -1,
+        Math.min(1, event.nativeEvent.wheelDelta || -event.nativeEvent.detail)
+      );
+      event.currentTarget.scrollLeft -= delta * 300;
+      event.preventDefault();
     }
-}
+  }
   return (
     <div
-    onWheel={horizontalScroll}
-    className="App">
+      // HORIZONTAL CLASS CALLED
+      onWheel={horizontalScroll}
+      className="App"
+    >
+      {/* SECTION 1 (HOME SECTION) START */}
       <div className="home-section   md:mt-0 lg:mt-0  section-1 gap-3 md:gap-6">
         <div className="header md:mt-0 lg:mt-0 mt-10 text-2xl md:text-5xl font-semibold">
           Perfect Vision, Perfect Style!
@@ -86,7 +93,12 @@ useEffect(() => {
         </div>
         <HomeButton />
       </div>
+      {/* SECTION 1 (HOME SECTION) END */}
+
+      {/* SECTION 2 GLASSES FOR EVERY LIFESTYLE  START */}
+
       <div className="home-section section-2 gap-7">
+        {/* LEFT SIDE  (CONTENT) */}
         <div className="text-content  gap-4">
           <div className="main-heading ">
             <h1 className="text-3xl font-bold">Glasses for Every Lifestyle</h1>
@@ -98,8 +110,15 @@ useEffect(() => {
           </div>
           <HomeButton />
         </div>
+        {/* RIGHT SIDE  (FRAME COLLECTION) USING MERQUEE START */}
         <div className="video-content">
-          <marquee behavior="" loop="10" className='md:w-[80%] w-full' direction="left">
+          {/* FIRST LINE */}
+          <marquee
+            behavior=""
+            loop="10"
+            className="md:w-[80%] w-full"
+            direction="left"
+          >
             <div className="rinning flex gap-3">
               <section className=" h-28 w-[10rem]  flex flex-col items-center rounded-xl  bg-gray-100 cursor-pointer gap-3 relative overflow-hidden  categoryContainer">
                 <img
@@ -147,7 +166,13 @@ useEffect(() => {
               </section>
             </div>
           </marquee>
-          <marquee scrolldelay="200" loop="10" className='md:w-[80%] w-full' direction="left">
+          {/* SECOND LINE */}
+          <marquee
+            scrolldelay="200"
+            loop="10"
+            className="md:w-[80%] w-full"
+            direction="left"
+          >
             <div className="rinning flex gap-3">
               <section className=" h-28 w-44  flex flex-col items-center rounded-xl  bg-gray-100 cursor-pointer gap-3 relative overflow-hidden  categoryContainer">
                 <img
@@ -196,11 +221,12 @@ useEffect(() => {
               </section>
             </div>
           </marquee>
+          {/* THIRD LINE */}
           <marquee
             behavior=""
             scrolldelay="100"
             loop="10"
-            className='md:w-[80%] w-full'
+            className="md:w-[80%] w-full"
             direction="left"
           >
             <div className="rinning flex gap-3">
@@ -251,7 +277,13 @@ useEffect(() => {
               </section>
             </div>
           </marquee>
-          <marquee behavior="" loop="40" className='md:w-[80%] w-full' direction="left">
+          {/* FOURTH LINE */}
+          <marquee
+            behavior=""
+            loop="40"
+            className="md:w-[80%] w-full"
+            direction="left"
+          >
             <div className="rinning flex gap-3">
               <section className=" h-28 w-44  flex flex-col items-center rounded-xl  bg-gray-100 cursor-pointer gap-3 relative overflow-hidden  categoryContainer">
                 <img
@@ -300,7 +332,11 @@ useEffect(() => {
             </div>
           </marquee>
         </div>
+        {/* RIGHT SIDE  (FRAME COLLECTION) USING MERQUEE END */}
       </div>
+      {/* SECTION 2 GLASSES FOR EVERY LIFESTYLE  END */}
+
+      {/* SECTION THREE COLLECTION START */}
       <div className="home-section section-3 gap-3">
         <div className="main-heading text-3xl font-bold">
           Redefine Your Look with Our Hottest Collection
@@ -310,6 +346,7 @@ useEffect(() => {
           elegance to modern edge, our top picks are designed to keep you
           looking sharp and feeling confident.
         </div>
+        {/* COLLECTION SLIDER */}
         <Slider>
           <Slide>
             <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
@@ -347,6 +384,9 @@ useEffect(() => {
         </Slider>
         <HomeButton />
       </div>
+      {/* SECTION THREE COLLECTION END */}
+
+      {/* SECTION FOUR INTRO VIDEO START */}
       <div className="home-section section-4">
         <div className="player-wrapper rounded bg-yellow-50 w-[100%] h-[100%]">
           <ReactPlayer
@@ -361,6 +401,9 @@ useEffect(() => {
           />
         </div>
       </div>
+      {/* SECTION FOUR INTRO VIDEO END */}
+
+      {/* SECTION FIVE VISION START */}
       <div className="home-section section-5 gap-3 md:gap-6">
         <div className="header md:px-24 lg:px-24 px-6 text-2xl md:text-5xl font-semibold">
           See the world with clarity and style. Redefine your vision with our
@@ -371,11 +414,15 @@ useEffect(() => {
         </div>
         <HomeButton />
       </div>
+      {/* SECTION FIVE VISION END */}
 
+      {/* SECTION SIX TIMELINE START */}
       <div className="flex flex-col">
         <section class="section intro md:py-[3.1rem] lg:py-[3.1rem] py-[2.1rem">
           <div class="container">
-            <h1 className="md:text-[2.5rem] lg:text-[2.5rem] text-[1.5rem]">Cover Eyewear - Redefining Vision with Style and Precision</h1>
+            <h1 className="md:text-[2.5rem] lg:text-[2.5rem] text-[1.5rem]">
+              Cover Eyewear - Redefining Vision with Style and Precision
+            </h1>
           </div>
         </section>
 
@@ -388,11 +435,13 @@ useEffect(() => {
               >
                 {/* Circle and Line */}
                 <div className="flex items-center">
-                <div
+                  <div
                     className="z-10 md:text-xs lg:text-xs text-xs flex items-center justify-center w-10 h-10 bg-blue-100 rounded-full shrink-0 font-semibold cursor-pointer"
                     onMouseEnter={() => setHoveredIndex(index)}
                     onMouseLeave={() => setHoveredIndex(null)}
-                  >{item.circleyear}</div>
+                  >
+                    {item.circleyear}
+                  </div>
                   {/* Line between circles */}
                   {index < timelineData.length - 1 && (
                     <div className="hidden w-52 sm:block h-0.5 bg-gray-300"></div>
@@ -411,7 +460,7 @@ useEffect(() => {
                     {item.description}
                   </p>
                 </div>
- 
+
                 {/* Hover Text */}
                 {hoveredIndex === index && (
                   <div className="absolute z-50 top-16 sm:top-10 p-4 bg-gray-100 shadow-lg rounded-md text-sm text-gray-700 w-64">
@@ -424,6 +473,7 @@ useEffect(() => {
           </ol>
         </div>
       </div>
+      {/* SECTION SIX TIMELINE END */}
     </div>
   );
 }
