@@ -122,6 +122,7 @@ export default function Landing() {
             <div className="rinning flex gap-3">
               <section className=" h-28 w-[10rem]  flex flex-col items-center rounded-xl  bg-gray-100 cursor-pointer gap-3 relative overflow-hidden  categoryContainer">
                 <img
+                alt=""
                   src={vision1}
                   className="rounded-xl h-full w-full object-cover transition-all delay-75 ease-out"
                 />
@@ -133,6 +134,7 @@ export default function Landing() {
               </section>
               <section className=" h-28 w-44  flex flex-col items-center rounded-xl  bg-gray-100 cursor-pointer gap-3 relative overflow-hidden  categoryContainer">
                 <img
+                alt=""
                   src={vision2}
                   className="rounded-xl h-full w-full object-cover transition-all delay-75 ease-out"
                 />
@@ -144,6 +146,7 @@ export default function Landing() {
               </section>
               <section className=" h-28 w-44  flex flex-col items-center rounded-xl  bg-gray-100 cursor-pointer gap-3 relative overflow-hidden  categoryContainer">
                 <img
+                alt=""
                   src={vision5}
                   className="rounded-xl h-full w-full object-cover transition-all delay-75 ease-out"
                 />
@@ -155,6 +158,7 @@ export default function Landing() {
               </section>
               <section className=" h-28 w-44  flex flex-col items-center rounded-xl  bg-gray-100 cursor-pointer gap-3 relative overflow-hidden  categoryContainer">
                 <img
+                alt=""
                   src={vision4}
                   className="rounded-xl h-full w-full object-cover transition-all delay-75 ease-out"
                 />
@@ -176,6 +180,7 @@ export default function Landing() {
             <div className="rinning flex gap-3">
               <section className=" h-28 w-44  flex flex-col items-center rounded-xl  bg-gray-100 cursor-pointer gap-3 relative overflow-hidden  categoryContainer">
                 <img
+                alt=""
                   src={vision3}
                   className="rounded-xl h-full w-full object-cover transition-all delay-75 ease-out"
                 />
@@ -187,6 +192,7 @@ export default function Landing() {
               </section>
               <section className=" h-28 w-44  flex flex-col items-center rounded-xl  bg-gray-100 cursor-pointer gap-3 relative overflow-hidden  categoryContainer">
                 <img
+                alt=""
                   src={vision1}
                   className="rounded-xl h-full w-full object-cover transition-all delay-75 ease-out"
                 />
@@ -198,6 +204,7 @@ export default function Landing() {
               </section>
               <section className=" h-28 w-44  flex flex-col items-center rounded-xl  bg-gray-100 cursor-pointer gap-3 relative overflow-hidden  categoryContainer">
                 <img
+                alt=""
                   src={vision1}
                   className="rounded-xl h-full w-full object-cover transition-all delay-75 ease-out"
                 />
@@ -210,6 +217,7 @@ export default function Landing() {
 
               <section className=" h-28 w-44  flex flex-col items-center rounded-xl  bg-gray-100 cursor-pointer gap-3 relative overflow-hidden  categoryContainer">
                 <img
+                alt=""
                   src={vision8}
                   className="rounded-xl h-full w-full object-cover transition-all delay-75 ease-out"
                 />
@@ -232,6 +240,7 @@ export default function Landing() {
             <div className="rinning flex gap-3">
               <section className=" h-28 w-44  flex flex-col items-center rounded-xl  bg-gray-100 cursor-pointer gap-3 relative overflow-hidden  categoryContainer">
                 <img
+                alt=""
                   src={vision4}
                   className="rounded-xl h-full w-full object-cover transition-all delay-75 ease-out"
                 />
@@ -243,6 +252,7 @@ export default function Landing() {
               </section>
               <section className=" h-28 w-44  flex flex-col items-center rounded-xl  bg-gray-100 cursor-pointer gap-3 relative overflow-hidden  categoryContainer">
                 <img
+                alt=""
                   src={vision2}
                   className="rounded-xl h-full w-full object-cover transition-all delay-75 ease-out"
                 />
@@ -255,6 +265,7 @@ export default function Landing() {
 
               <section className=" h-28 w-44  flex flex-col items-center rounded-xl  bg-gray-100 cursor-pointer gap-3 relative overflow-hidden  categoryContainer">
                 <img
+                alt=""
                   src={vision9}
                   className="rounded-xl h-full w-full object-cover transition-all delay-75 ease-out"
                 />
@@ -266,6 +277,7 @@ export default function Landing() {
               </section>
               <section className=" h-28 w-44  flex flex-col items-center rounded-xl  bg-gray-100 cursor-pointer gap-3 relative overflow-hidden  categoryContainer">
                 <img
+                alt=""
                   src={vision6}
                   className="rounded-xl h-full w-full object-cover transition-all delay-75 ease-out"
                 />
@@ -287,6 +299,7 @@ export default function Landing() {
             <div className="rinning flex gap-3">
               <section className=" h-28 w-44  flex flex-col items-center rounded-xl  bg-gray-100 cursor-pointer gap-3 relative overflow-hidden  categoryContainer">
                 <img
+                alt=""
                   src={vision9}
                   className="rounded-xl h-full w-full object-cover transition-all delay-75 ease-out"
                 />
@@ -298,6 +311,7 @@ export default function Landing() {
               </section>
               <section className=" h-28 w-44  flex flex-col items-center rounded-xl  bg-gray-100 cursor-pointer gap-3 relative overflow-hidden  categoryContainer">
                 <img
+                alt=""
                   src={vision7}
                   className="rounded-xl h-full w-full object-cover transition-all delay-75 ease-out"
                 />
@@ -309,6 +323,7 @@ export default function Landing() {
               </section>
               <section className=" h-28 w-44  flex flex-col items-center rounded-xl  bg-gray-100 cursor-pointer gap-3 relative overflow-hidden  categoryContainer">
                 <img
+                alt=""
                   src={vision3}
                   className="rounded-xl h-full w-full object-cover transition-all delay-75 ease-out"
                 />
@@ -320,6 +335,7 @@ export default function Landing() {
               </section>
               <section className=" h-28 w-44  flex flex-col items-center rounded-xl  bg-gray-100 cursor-pointer gap-3 relative overflow-hidden  categoryContainer">
                 <img
+                alt=""
                   src={vision5}
                   className="rounded-xl h-full w-full object-cover transition-all delay-75 ease-out"
                 />
